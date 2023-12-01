@@ -732,7 +732,7 @@ footer .bottom .links a {
     }
 
     .main .left button {
-        width: 100%;
+        width: 85vw;
     }
 
     .skills h5,
@@ -761,12 +761,6 @@ footer .bottom .links a {
 
     /* ———————————–––––––––––––––--------------- */
 
-    .portfolio .header button {
-        padding: 8px 18px;
-    
-        gap: 6px;
-    }
-
     .portfolio .header {
         flex-direction: column;
         justify-content: center;
@@ -778,11 +772,11 @@ footer .bottom .links a {
     .portfolio .header button {
         font-size: 12px;
 
+        /* padding: 8px 18px; */
+
         align-items: center;
         justify-content: center;
         gap: 20px;
-
-        width: 70%;
     }
     
     .portfolio .header button i {
