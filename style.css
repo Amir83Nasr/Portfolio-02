@@ -767,11 +767,18 @@ footer .bottom .links a {
 
     .portfolio .header {
         flex-direction: column;
+        justify-content: center;
         gap: 30px;
+
+        text-align: center;
     }
 
     .portfolio .header button {
         font-size: 12px;
+
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
 
         width: 70%;
     }
