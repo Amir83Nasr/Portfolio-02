@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+/* ———————————–––––––––––––––-------------------- */
+
+:root {
+    --color-01: #fff;
+    --color-02: #deebee;
+    --color-purple: #5e3bee;
+    --color-dark-blue: #1c1e53;
+    --color-green: #006b6a;
+    --color-seperator: #282932;
+    --color-black: #000;
+    --color-black-02: #000;
+    --color-icon: #000;
+}
+
+.dark-theme {
+    --color-01: #121212;
+    --color-02: #232e30;
+    --color-purple: #796596;
+    --color-dark-blue: #d0d0d0;
+    --color-green: #006b6a;
+    --color-seperator: #d0d0d0;
+    --color-black: #d0d0d0;
+    --color-black-02: #9b9b9b;
+    --color-icon: #d0d0d0;
+}
+
+nav .bxs-moon,
+nav .bxs-sun {
+    font-size: 24px;
+
+    color: var(--color-icon);
+
+    cursor: pointer;
+}
+
+nav .bxs-moon:hover,
+nav .bxs-sun:hover {
+    color: var(--color-purple);
+}
+
+/* ———————————–––––––––––––––-------------------- */
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,21 +52,28 @@ html {
 
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+
+    transition: background 0.6s ease, color 0.6s ease;
+}
+
+body {
+    background: var(--color-01);
 }
 
 a {
     text-decoration: none;
-    color: #1c1e53;
+    color: var(--color-dark-blue);
 
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #5e3bee;
+    color: var(--color-purple);
 }
 
 h5 {
     font-size: 20px;
+    color: var(--color-black-02);
 }
 
 li {
@@ -34,7 +83,7 @@ li {
 /* ———————————–––––––––––––––-------------------- */
 
 nav {
-    background: #fff;
+    background: var(--color-01);
 
     position: sticky;
     top: 0;
@@ -59,15 +108,12 @@ footer .logo a {
     font-size: 20px;
     font-weight: bold;
 
+    color: var(--color-black);
+
     margin-left: 8px;
 }
 
-nav .logo img {
-    width: 50px;
-
-    margin-right: 5px;
-}
-
+nav .logo img,
 footer .logo img {
     height: 40px;
     width: 40px;
@@ -83,13 +129,21 @@ footer .top ul {
     gap: 40px;
 }
 
+nav .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
 nav button {
-    color: #1c1e53;
+    color: var(--color-dark-blue);
     background: transparent;
 
     padding: 12px 16px;
 
-    border: 1px solid #1c1e53;
+    border: 1px solid var(--color-dark-blue);
     border-radius: 5px;
 
     cursor: pointer;
@@ -97,9 +151,9 @@ nav button {
 }
 
 nav button:hover {
-    background: #5e3bee;
-    border-color: #5e3bee;
-    color: #fff;
+    background: var(--color-purple);
+    border-color: var(--color-purple);
+    color: var(--color-01);
 }
 
 nav button#menuButton {
@@ -115,7 +169,7 @@ nav button#menuButton {
 /* ———————————–––––––––––––––-------------------- */
 
 .main {
-    background: #deebee;
+    background: var(--color-02);
     padding: 90px 85px;
 
     display: flex;
@@ -133,24 +187,25 @@ nav button#menuButton {
 .main .left h3 {
     font-size: 46px;
     font-weight: bold;
+    color: var(--color-black);
 
     margin-top: 10px;
 }
 
 .main .left h3 span {
-    color: #5e3bee;
+    color: var(--color-purple);
 }
 
 .main .left p {
     font-size: 22px;
-    color: #1c1e53;
+    color: var(--color-dark-blue);
 
     margin-top: 20px;
 }
 
 .main .left button {
-    color: #fff;
-    background: #5e3bee;
+    color: var(--color-01);
+    background: var(--color-purple);
 
     margin-top: 40px;
 
@@ -178,6 +233,7 @@ nav button#menuButton {
 .portfolio .header h3,
 .feedback h3 {
     font-size: 40px;
+    color: var(--color-black);
 
     margin-top: 20px;
 }
@@ -190,7 +246,7 @@ nav button#menuButton {
 }
 
 .skills .skill-items .item {
-    background: #deebee;
+    background: var(--color-02);
     width: 25%;
 
     padding: 32px;
@@ -203,7 +259,7 @@ nav button#menuButton {
 }
 
 .skills .skill-items .item:hover {
-    border-color: #5e3bee;
+    border-color: var(--color-purple);
 }
 
 .skills .skill-items .item .icon {
@@ -211,7 +267,7 @@ nav button#menuButton {
     align-items: center;
     justify-content: center;
 
-    background: #fff;
+    background: var(--color-01);
 
     height: 46px;
     width: 46px;
@@ -223,17 +279,18 @@ nav button#menuButton {
 
 .skills .skill-items .item .icon i {
     font-size: 26px;
-    color: #006b6a;
+    color: var(--color-green);
 }
 
 .skills .skill-items .item h4,
 .portfolio .portfo-items .item .info h4 {
     font-size: 18px;
+    color: var(--color-black);
 }
 
 .skills .skill-items .item p {
     font-size: 14px;
-    color: #1c1e53;
+    color: var(--color-black-02);
     line-height: 22px;
 
     margin-top: 20px;
@@ -251,7 +308,7 @@ nav button#menuButton {
 }
 
 .about .left {
-    background: #deebee;
+    background: var(--color-02);
     border-radius: 10px;
 }
 
@@ -263,6 +320,7 @@ nav button#menuButton {
 
 .about .right p {
     font-size: 16px;
+    color: var(--color-black-02);
 
     margin-top: 30px;
 }
@@ -270,7 +328,7 @@ nav button#menuButton {
 /* ———————————–––––––––––––––-------------------- */
 
 .portfolio {
-    background: #deebee;
+    background: var(--color-02);
 
     padding: 110px 85px;
 }
@@ -284,8 +342,8 @@ nav button#menuButton {
 }
 
 .portfolio .header button {
-    background: #1c1e53;
-    color: #fff;
+    background: var(--color-dark-blue);
+    color: var(--color-01);
 
     padding: 10px 20px;
 
@@ -311,7 +369,7 @@ nav button#menuButton {
 
 .portfolio .portfo-items .item {
     width: 30%;
-    background: #fff;
+    background: var(--color-01);
 
     border-bottom: 4px solid transparent;
     border-radius: 10px;
@@ -323,7 +381,7 @@ nav button#menuButton {
 }
 
 .portfolio .portfo-items .item:hover {
-    border-color: #5e3bee;
+    border-color: var(--color-purple);
 }
 
 .portfolio .portfo-items .item img {
@@ -349,13 +407,15 @@ nav button#menuButton {
 
 .portfolio .portfo-items .item .info p {
     font-size: 13px;
+    color: var(--color-black-02);
+
     margin: 10px 0 5px;
 }
 
 .portfolio .portfo-items .item .info a span {
     text-decoration: underline;
     text-underline-offset: 10px;
-    text-decoration-color: #5e3bee;
+    text-decoration-color: var(--color-purple);
 }
 
 .portfolio .portfo-items .item .info a i {
@@ -385,7 +445,7 @@ nav button#menuButton {
 
     width: 48%;
 
-    background: #deebee;
+    background: var(--color-02);
 
     border: 2px solid transparent;
     border-radius: 10px;
@@ -398,16 +458,17 @@ nav button#menuButton {
 
 .feedback .customers .item .rating {
     font-size: 22px;
-    color: #006b6a;
+    color: var(--color-green);
 }
 
 .feedback .customers .item:hover {
-    border-color: #006b6a;
+    border-color: var(--color-green);
 }
 
 .feedback .customers .item p {
     font-size: 16px;
     line-height: 22px;
+    color: var(--color-black-02);
 }
 
 .feedback .customers .item .user {
@@ -429,18 +490,19 @@ nav button#menuButton {
 .feedback .customers .item .user h5 {
     font-size: 16px;
     /* font-weight: 500; */
+    color: var(--color-black);
 
     margin-bottom: 5px;
 }
 
 /* .feedback .customers .item .user p { */
-    /* font-size: 12px; */
+/* font-size: 12px; */
 /* } */
 
 /* ———————————–––––––––––––––-------------------- */
 
 footer {
-    background: #deebee;
+    background: var(--color-02);
 
     display: flex;
     flex-direction: column;
@@ -469,15 +531,17 @@ footer .separator {
 
     margin: 30px 0 20px;
 
-    background: #282932;
+    background: var(--color-seperator);
 }
 
 footer .bottom p {
     font-size: 12px;
+    color: var(--color-black-02);
 }
 
 footer .bottom .links a {
     font-size: 12px;
+    color: var(--color-black-02);
 
     margin-left: 14px;
 }
@@ -717,8 +781,22 @@ footer .bottom .links a {
 /* ———————————–––––––––––––––--------------------------- */
 
 @media screen and (max-width: 576px) {
-    nav .logo a ,
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .logo a,
     footer .top .logo a {
+        font-size: 18px;
+    }
+
+    nav button#menuButton {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    nav .bxs-moon,
+    nav .bxs-sun {
         font-size: 18px;
     }
 
@@ -783,7 +861,7 @@ footer .bottom .links a {
         justify-content: center;
         gap: 20px;
     }
-    
+
     .portfolio .header button i {
         font-size: 22px;
     }
