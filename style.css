@@ -62,7 +62,12 @@ footer .logo a {
     margin-left: 8px;
 }
 
-nav .logo img,
+nav .logo img {
+    width: 50px;
+
+    margin-right: 5px;
+}
+
 footer .logo img {
     height: 40px;
     width: 40px;
