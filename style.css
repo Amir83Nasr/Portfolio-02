@@ -113,7 +113,12 @@ footer .logo a {
     margin-left: 8px;
 }
 
-nav .logo img,
+nav .logo img {
+    height: 28px;
+
+    margin-right: 5px;
+}
+
 footer .logo img {
     height: 40px;
     width: 40px;
@@ -788,6 +793,10 @@ footer .bottom .links a {
     nav .logo a,
     footer .top .logo a {
         font-size: 18px;
+    }
+
+    nav .logo img {
+        height: 24px;
     }
 
     nav button#menuButton {
