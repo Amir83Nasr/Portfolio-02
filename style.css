@@ -2,6 +2,11 @@
 
 /* ———————————–––––––––––––––-------------------- */
 
+::selection {
+    background-color: var(--color-01);
+    color: var(--color-purple);
+}
+
 :root {
     --color-01: #fff;
     --color-02: #deebee;
@@ -893,9 +898,5 @@ nav.open ul {
 nav.open ul {
     display: flex;
 }
-
-/* nav.open {
-    flex-direction: column-reverse;
-} */
 
 /* ———————————–––––––––––––––--------------------------- */
